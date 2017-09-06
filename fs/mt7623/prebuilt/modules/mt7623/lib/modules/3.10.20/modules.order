@@ -1,0 +1,5 @@
+kernel/drivers/net/ethernet/broadcom/tg3-3.133d/tg3_3133d.ko
+kernel/drivers/net/ethernet/intel/e1000e/e1000e.ko
+kernel/drivers/net/ethernet/intel/igb-5.2.15/igb_v5215.ko
+kernel/net/netfilter/nf_sc.ko
+kernel/net/nat/hw_nat/hw_nat.ko

@@ -1,0 +1,66 @@
+md5.o: md5.c ../config.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/string.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/features.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_config.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/cdefs.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stddef.h \
+ md5.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/limits.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/syslimits.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/limits.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix1_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/local_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/limits.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_local_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix2_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/xopen_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/stdio_lim.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdint.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdint.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wchar.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wordsize.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/inttypes.h
+
+../config.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/string.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/features.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_config.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/cdefs.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stddef.h:
+
+md5.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/limits.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/syslimits.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/limits.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix1_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/local_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/limits.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_local_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix2_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/xopen_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/stdio_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdint.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdint.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wchar.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wordsize.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/inttypes.h:

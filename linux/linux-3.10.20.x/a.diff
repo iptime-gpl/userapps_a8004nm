@@ -1,0 +1,191 @@
+13a14
+> #include <linux/version.h>
+538a540,542
+> #ifdef CONFIG_EFM_PATCH
+> static char ftp_names[MAX_PORTS][2][sizeof("ftp-65535")] __read_mostly;
+> #endif
+544a549,727
+> #ifdef CONFIG_EFM_PATCH
+> static int register_helper(int i)
+> {
+>         char *tmpname;
+>         int j, ret = 0;
+> 
+>         ftp[i][0].tuple.src.l3num = PF_INET;
+>         ftp[i][1].tuple.src.l3num = PF_INET6;
+>         for (j = 0; j < 2; j++) {
+>                 ftp[i][j].tuple.src.u.tcp.port = htons(ports[i]);
+>                 ftp[i][j].tuple.dst.protonum = IPPROTO_TCP;
+>                 ftp[i][j].expect_policy = &ftp_exp_policy;
+>                 ftp[i][j].me = THIS_MODULE;
+>                 ftp[i][j].help = help;
+>                 tmpname = &ftp_names[i][j][0];
+>                 if (ports[i] == FTP_PORT)
+>                         sprintf(tmpname, "ftp");
+>                 else
+>                         sprintf(tmpname, "ftp-%d", ports[i]);
+>                 strcpy(ftp[i][j].name, tmpname);
+> 
+>                 pr_debug("nf_ct_ftp: registering helper for pf: %d "
+>                          "port: %d\n",
+>                          ftp[i][j].tuple.src.l3num, ports[i]);
+>                 ret = nf_conntrack_helper_register(&ftp[i][j]);
+>                 if (ret)
+>                         break;
+>         }
+>         return ret;
+> }
+> 
+> static int unregister_helper(int i)
+> {
+>         int j;
+> 
+>         for (j = 0; j < 2; j++) {
+> #ifdef CONFIG_MODULES
+> /* scchoi If use FTP modules */
+> #if 0
+>                 if (ftp[i][j].me == NULL)
+>                         continue;
+> #endif
+> #endif
+>                 pr_debug("nf_ct_ftp: unregistering helper for pf: %d "
+>                          "port: %d\n",
+>                          ftp[i][j].tuple.src.l3num, ports[i]);
+>                 nf_conntrack_helper_unregister(&ftp[i][j]);
+>         }
+>         return 0;
+> }
+> 
+> #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,36)
+> static int proc_read(char *buffer, char **start, off_t offset, int length, int *eof, void *data)
+> {
+>         char *p = buffer;
+>         int len, i;
+> 
+>         for (i=0; i < ports_c; i++)
+>                 p += sprintf(p, "%d ", ports[i]);
+>                 p += sprintf(p, "\n");
+> 
+>         len = p - buffer;
+>         if( len <= offset+length ) *eof = 1;
+>         *start = buffer + offset;
+>         len -= offset;
+>         if( len > length ) len = length;
+>         if( len < 0 ) len = 0;
+> 
+>         return len;
+> }
+> #else
+> static int proc_read(struct seq_file *seq, void *v)
+> {
+>         int i;
+> 
+>         for (i=0; i < ports_c; i++)
+>                 seq_printf(seq, "%d ", ports[i]);
+>                 seq_printf(seq, "\n");
+> 
+>         return 0;
+> }
+> static int proc_open(struct inode *inode, struct file *file)
+> {
+> 	return single_open(file, proc_read, NULL);
+> }
+> #endif
+> static int get_ports(const char *string, char *ftp_ports[])
+> {
+>         char *p;
+>         int n;
+> 
+>         ftp_ports[0]=0;
+>         n = 0;
+> 
+>         p = (char *) string;
+>         while (*p == ' ') p++;
+> 
+>         while (*p)
+>         {
+>                 ftp_ports[n] = p;
+>                 while (*p != ' ' && *p) p++;
+>                 if (0==*p) goto out;
+>                 *p++ = '\0';
+>                 while (*p == ' ' && *p) p++;
+> out:
+>                 n++;
+>                 if (n == (MAX_PORTS-1))
+>                 break;
+>         }
+>         return n;
+> }
+> 
+> static int proc_write( struct file *file, const char __user *buffer, size_t count, loff_t *data )
+> {
+>         char buf[300];
+>         char *ftp_ports[MAX_PORTS];
+>         int ports_count, tmp_port, i;
+> 
+>         if (count > 0 && count < 299)
+>         {
+>                 if (copy_from_user(buf, buffer, count))
+>                         return -EFAULT;
+>                 buf[count-1]='\0';
+> 
+>                 /* unregister user ftp private ports */
+>                 for (i = 1; i < ports_c; i++)  /* index 0 == default port 21 */
+>                 {
+>                         if (ports[i])
+>                                 unregister_helper(i);
+>                         ports[i] = 0;
+>                 }
+> 
+>                 ports_count = get_ports((const char *)buf, ftp_ports);
+> 
+>                 /* register user ftp private ports */
+>                 for (i = 1, ports_c = 1; i <= ports_count; i++, ports_c++)  /* index 0 == default port 21 */
+>                 {
+>                         sscanf(ftp_ports[i-1], "%d", &tmp_port);
+>                         ports[i] = (u_int16_t)tmp_port;
+>                         if (ports[i])
+>                                 register_helper(i);
+>                 }
+>         }
+> 
+>         return count;
+> }
+> 
+> #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,36)
+> #else
+> static struct file_operations ftp_fops = {
+>         .owner          = THIS_MODULE,
+>         .open           = proc_open,
+>         .read           = seq_read,
+>         .llseek         = seq_lseek,
+>         .write          = proc_write,
+>         .release        = single_release
+> };
+> #endif
+> 
+> static int create_proc_ftp_port(void)
+> {
+>         struct proc_dir_entry *proc_entry;
+> 
+> #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,36)
+>         proc_entry = create_proc_entry("driver/ftp_port",0,0);
+>         if(proc_entry)
+>         {
+>                 proc_entry->read_proc = &proc_read;
+>                 proc_entry->write_proc = &proc_write;
+>         }
+> #else
+> 	if(!(proc_entry = proc_create("driver/ftp_port", 0, 0, &ftp_fops)))
+> 		printk("!! FAIL to create driver/ftp_port PROC !!\n");
+> #endif
+>         return 0;
+> }
+> #endif
+> 
+> 
+605a789,792
+> 
+> #ifdef CONFIG_EFM_PATCH
+>         create_proc_ftp_port();
+> #endif

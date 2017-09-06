@@ -1,0 +1,19 @@
+minixml.o: minixml.c \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/string.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/features.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_config.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/cdefs.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stddef.h \
+ minixml.h
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/string.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/features.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_config.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/cdefs.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stddef.h:
+
+minixml.h:

@@ -1,0 +1,338 @@
+dsi_stream.lo: dsi_stream.c ../../config.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdio.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/features.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_config.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/cdefs.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stddef.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/types.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wordsize.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/typesizes.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sched.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_stdio.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/wchar.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wchar.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_mutex.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/pthread.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sched.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/time.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/time.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_clk_tck.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/signal.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigset.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/initspin.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigthread.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_pthread.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdarg.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/stdio_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdlib.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/waitflags.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/waitstatus.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/endian.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/endian.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/byteswap.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/byteswap.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/byteswap-common.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/types.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/select.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/select.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/sysmacros.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/alloca.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/unistd.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix_opt.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/environments.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/confname.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/getopt.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/string.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/errno.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/errno.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/errno.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/errno.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/errno.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/errno-base.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/socket.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/uio.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uio.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/socket.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/limits.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/syslimits.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/limits.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix1_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/local_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/limits.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_local_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix2_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/xopen_lim.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/socket_type.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sockaddr.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/socket.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/socket.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/sockios.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/sockios.h \
+ ../../include/atalk/logger.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdbool.h \
+ ../../include/atalk/dsi.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/time.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/signum.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/siginfo.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigaction.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigcontext.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/sigcontext.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigstack.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/ucontext.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/procfs.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/user.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/netinet/in.h \
+ /opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdint.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdint.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/in.h \
+ ../../include/atalk/afp.h ../../sys/netatalk/endian.h \
+ ../../include/atalk/server_child.h ../../include/atalk/globals.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/param.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/param.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/param.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/param.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/grp.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/netdb.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/rpc/netdb.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/netdb.h \
+ ../../sys/netatalk/at.h ../../include/atalk/compat.h \
+ ../../include/atalk/unicode.h ../../include/atalk/uam.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/pwd.h \
+ ../../include/atalk/util.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/poll.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/poll.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/poll.h \
+ ../../include/atalk/bstrlib.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/ctype.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_touplow.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/dlfcn.h \
+ /opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/dlfcn.h
+
+../../config.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdio.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/features.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_config.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/cdefs.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stddef.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/types.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wordsize.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/typesizes.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/pthreadtypes.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sched.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_stdio.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/wchar.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/wchar.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_mutex.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/pthread.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sched.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/time.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/time.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_clk_tck.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/signal.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigset.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/initspin.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigthread.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_pthread.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdarg.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/stdio_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdlib.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/waitflags.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/waitstatus.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/endian.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/endian.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/byteswap.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/byteswap.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/byteswap-common.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/types.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/select.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/select.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/sysmacros.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/alloca.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/unistd.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix_opt.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/environments.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/confname.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/getopt.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/string.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/errno.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/errno.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/errno.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/errno.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/errno.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/errno-base.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/socket.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/uio.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uio.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/socket.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/limits.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include-fixed/syslimits.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/limits.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix1_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/local_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/limits.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_local_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/posix2_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/xopen_lim.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/socket_type.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sockaddr.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/socket.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/socket.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/sockios.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/sockios.h:
+
+../../include/atalk/logger.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdbool.h:
+
+../../include/atalk/dsi.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/time.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/signum.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/siginfo.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigaction.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigcontext.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/sigcontext.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/sigstack.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/ucontext.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/procfs.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/user.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/netinet/in.h:
+
+/opt/buildroot-gcc483_arm/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/include/stdint.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/stdint.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/in.h:
+
+../../include/atalk/afp.h:
+
+../../sys/netatalk/endian.h:
+
+../../include/atalk/server_child.h:
+
+../../include/atalk/globals.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/param.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/linux/param.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm/param.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/asm-generic/param.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/grp.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/netdb.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/rpc/netdb.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/netdb.h:
+
+../../sys/netatalk/at.h:
+
+../../include/atalk/compat.h:
+
+../../include/atalk/unicode.h:
+
+../../include/atalk/uam.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/pwd.h:
+
+../../include/atalk/util.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/poll.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/sys/poll.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/poll.h:
+
+../../include/atalk/bstrlib.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/ctype.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/uClibc_touplow.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/dlfcn.h:
+
+/opt/buildroot-gcc483_arm/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/bits/dlfcn.h:

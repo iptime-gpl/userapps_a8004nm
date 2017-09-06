@@ -1,0 +1,125 @@
+117,119c117
+< //        log(LOG_ERR, 0 ,"FATAL: Unable to get Upstream IF.");
+<         log(LOG_WARNING, 0 ,"FATAL: Unable to get Upstream IF.");
+<         return;
+---
+>         log(LOG_ERR, 0 ,"FATAL: Unable to get Upstream IF.");
+320c318
+< #if 1 //EFM
+---
+> #ifdef IGMP_PROXY_REALTEK_METHOD
+334d331
+< 
+386a384
+> 
+404a403
+> 
+414a414,462
+> #define USE_EFM_PATCH
+> #ifdef USE_EFM_PATCH
+> void ipmrcache_gc(void)
+> {
+> 	char buffer[128], *ptr;
+> 	FILE *fp;
+> 	struct RouteTable croute;
+> 
+> 	if ((fp = fopen("/proc/net/ip_mr_cache", "r")) == NULL)
+> 		return;
+> 
+> 	memset(&croute, 0x0, sizeof(struct RouteTable));
+> 
+> 	fgets(buffer, 128, fp);
+> 
+> 	while (fgets(buffer, 128, fp))
+> 	{
+> 		ptr =  strtok(buffer, " \t\n"); // Group
+> 		croute.group = string_to_hexa(ptr);
+> 		if (findRoute(croute.group))
+> 		{
+> 			//fprintf(stderr, "found() group %08x\n", croute.group);
+> 			continue;
+> 		}
+> 		ptr =  strtok(NULL, " \t\n"); // Origin
+> 		croute.originAddr = string_to_hexa(ptr);
+> 		ptr =  strtok(NULL, " \t\n"); // Iif
+> 		ptr =  strtok(NULL, " \t\n"); // Pkts
+> 		ptr =  strtok(NULL, " \t\n"); // Bytes
+> 		ptr =  strtok(NULL, " \t\n"); // Wrong
+> 		ptr =  strtok(NULL, " \t\n"); // Oifs
+> 
+> 		if (ptr == NULL)
+> 			continue;
+> 
+> 		croute.vifBits = 0x2;
+> 		croute.upstrState = ROUTESTATE_JOINED;
+> 	
+> 		internUpdateKernelRoute(&croute, 0);
+> 		sendJoinLeaveUpstream(&croute, 0);
+> 
+> 		syslog_msg(0, "ipmrcache_gc() group %08x\n", croute.group);
+> 		syslog_msg(0, "ipmrcache_gc() orgin %08x\n", croute.originAddr);
+> 	}
+> 
+> 	fclose(fp);
+> }
+> #endif
+> 
+425c473,483
+< #ifdef RT3052_SUPPORT
+---
+> #ifdef USE_EFM_PATCH
+>     // START:  EFM patch, 2012-08-14, ysyoo
+>     for( croute = routing_table; croute != NULL; croute = nroute ) {
+>         // Keep the next route (since current route may be removed)...
+>         nroute = croute->nextroute;
+> 
+> 	// SWITCH SUPPORT
+> 	if (sweap_no_report_members(croute->group))
+> 		removeRoute(croute);
+>     }
+> #else
+427a486
+>     // END : EFM patch, 2012-08-14, ysyoo
+440a500,504
+> #ifdef USE_EFM_PATCH
+> 	ipmrcache_gc();
+> #endif
+> 
+> 
+456a521
+>             if (all_member_leaved(ntohl(group)))	// SWITCH SUPPORT
+541d605
+< 
+597a662,664
+> 	    // SWITCH SUPPORT
+>             remove_multicast_ip(ntohl(croute->group));
+> 
+600,608d666
+< 
+< #ifdef RT3052_SUPPORT
+< 			/*
+< 			 *  Avoid to remove a "pre-allocate" routing rule created by igmpproxy.
+< 			 *  "vifBits == 0" means the dest IF is still unknown.
+< 			 */
+< 			if(croute->vifBits > 0)
+< 				remove_multicast_ip(ntohl(croute->group));
+< #endif
+629,631c687
+<     memset(&mrDesc, 0, sizeof(mrDesc));
+< 
+< #if 1 // EFM
+---
+> #ifdef IGMP_PROXY_REALTEK_METHOD
+646a703,706
+> 	fprintf(stderr, "route->group : %08x\n", route->group);
+> 	fprintf(stderr, "route->originAddr : %08x\n", route->originAddr);
+>         fprintf(stderr, "route->vifBits : %08x \n", route->vifBits);
+> 
+650a711
+>                 fprintf(stderr, "Identified VIF #%d as upstream. \n", Dp->index);
+654a716
+>                 fprintf(stderr, "Setting TTL for Vif %d to %d \n", Dp->index, Dp->threshold);
+665d726
+<         
+681a743
+> 
