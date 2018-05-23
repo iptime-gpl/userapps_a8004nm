@@ -46,6 +46,8 @@ mkdevs.efm:
 	@sudo mknod -m664 $(ROOT_DIR)/dev/mtd/5ro c 90 11
 	@sudo mknod -m664 $(ROOT_DIR)/dev/mtd/6 c 90 12
 	@sudo mknod -m664 $(ROOT_DIR)/dev/mtd/6ro c 90 13
+	@sudo mknod -m664 $(ROOT_DIR)/dev/mtd/7 c 90 14
+	@sudo mknod -m664 $(ROOT_DIR)/dev/mtd/7ro c 90 15
 
 	@mkdir $(ROOT_DIR)/dev/cua
 	@sudo mknod -m664 $(ROOT_DIR)/dev/cua/0 c 5 64
@@ -321,7 +323,7 @@ CLIB_DIR:=fs/mt7623/clib/gcc483
 include $(USERAPPS_ROOT)/mkscripts/target.mk
 
 # Image Section
-FIRMWARE_NAME:=a8004nm_ml_10_008.bin
+FIRMWARE_NAME:=a8004nm_ml_10_022.bin
 FIRMWARE_TYPE:=kernel
 BOOTIMG := ./prebuilt/boot/$(BOOT_FILENAME)
 
@@ -332,9 +334,12 @@ kernel:
 image: kernel
 	@./mkimage -A arm -O linux -T $(FIRMWARE_TYPE) -C none -a 80008000 -e 80008000 -n $(PRODUCT_ID) -d ./zImage $(FIRMWARE_NAME)
 	@./mkfirm -o clones/$(TARGET)/$(PRODUCT_ID)_xboot.bin -a $(PRODUCT_ID) -b $(BOOTIMG) -e clones/$(TARGET)/dummy.bin -m $(MAX_BOOT_SIZE) -f 1
+ifneq ($(NAND_PRELOADER),)
 	@echo -n "Making $(FIRMWARE_NAME).burn for Mass ... "
+	# Add Preloader for NAND
+	@cp clones/$(TARGET)/$(NAND_PRELOADER) $(FIRMWARE_NAME).burn
 	# Add Boot Loader
-	@cp clones/$(TARGET)/$(PRODUCT_ID)_xboot.bin $(FIRMWARE_NAME).burn
+	@cat clones/$(TARGET)/$(PRODUCT_ID)_xboot.bin >> $(FIRMWARE_NAME).burn
 	# Add Config region
 	@rm -rf config.bin; touch config.bin; ./addpad config.bin $(MAX_CONFIG_SIZE) 0xff
 	@cat config.bin >> $(FIRMWARE_NAME).burn
@@ -349,6 +354,7 @@ image: kernel
 	@cat $(FIRMWARE_NAME) >> $(FIRMWARE_NAME).burn
 	@echo "Done"
 	@mv $(FIRMWARE_NAME).burn binary/$(FIRMWARE_NAME).burn
+endif
 	@mv $(FIRMWARE_NAME) binary/$(FIRMWARE_NAME)
 
 #	ftp 192.168.100.100
